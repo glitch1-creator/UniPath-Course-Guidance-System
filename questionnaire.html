@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Quiz - UniPath Guidance System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navigation">
+
+<a href="index.html">
+<img src="images/unipath-logo.png.png" id="logo" alt="UniPath Logo">
+</a>
+
+<p class="tagline">Find your university path</p>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="questionnaire.html" class="active">Quiz</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+    <main>
+        <section class="questionnaire-section">
+            <div class="container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <p class="progress-text">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span></p>
+
+                <form id="questionnaireForm">
+                    <!-- Personal Information -->
+                    <div class="question-card active" data-question="1">
+                        <h3>What's your name?</h3>
+                        <input type="text" id="userName" name="userName" required placeholder="Enter your name">
+                    </div>
+
+                    <!-- Academic Interests -->
+                    <div class="question-card" data-question="2">
+                        <h3>Which subjects do you enjoy most?</h3>
+                        <p class="question-subtitle">Select all that apply</p>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="interests" value="mathematics"> Mathematics</label>
+                            <label><input type="checkbox" name="interests" value="science"> Science</label>
+                            <label><input type="checkbox" name="interests" value="literature"> Literature</label>
+                            <label><input type="checkbox" name="interests" value="history"> History</label>
+                            <label><input type="checkbox" name="interests" value="art"> Art & Design</label>
+                            <label><input type="checkbox" name="interests" value="technology"> Technology</label>
+                            <label><input type="checkbox" name="interests" value="business"> Business</label>
+                            <label><input type="checkbox" name="interests" value="languages"> Languages</label>
+                            <label><input type="checkbox" name="interests" value="sports"> Sports & PE</label>
+                            <label><input type="checkbox" name="interests" value="music"> Music</label>
+                        </div>
+                    </div>
+
+                    <!-- Strengths -->
+                    <div class="question-card" data-question="3">
+                        <h3>What are your strongest skills?</h3>
+                        <p class="question-subtitle">Select up to 3</p>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="strengths" value="analytical"> Analytical Thinking</label>
+                            <label><input type="checkbox" name="strengths" value="creative"> Creative Problem Solving</label>
+                            <label><input type="checkbox" name="strengths" value="communication"> Communication</label>
+                            <label><input type="checkbox" name="strengths" value="leadership"> Leadership</label>
+                            <label><input type="checkbox" name="strengths" value="technical"> Technical Skills</label>
+                            <label><input type="checkbox" name="strengths" value="research"> Research</label>
+                            <label><input type="checkbox" name="strengths" value="teamwork"> Teamwork</label>
+                            <label><input type="checkbox" name="strengths" value="organization"> Organization</label>
+                        </div>
+                    </div>
+
+                    <!-- Weaknesses -->
+                    <div class="question-card" data-question="4">
+                        <h3>Which subjects do you find challenging?</h3>
+                        <p class="question-subtitle">Select all that apply</p>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="weaknesses" value="mathematics"> Mathematics</label>
+                            <label><input type="checkbox" name="weaknesses" value="science"> Science</label>
+                            <label><input type="checkbox" name="weaknesses" value="writing"> Essay Writing</label>
+                            <label><input type="checkbox" name="weaknesses" value="public-speaking"> Public Speaking</label>
+                            <label><input type="checkbox" name="weaknesses" value="time-management"> Time Management</label>
+                            <label><input type="checkbox" name="weaknesses" value="group-work"> Group Work</label>
+                        </div>
+                    </div>
+
+                    <!-- Learning Style -->
+                    <div class="question-card" data-question="5">
+                        <h3>How do you prefer to learn?</h3>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="learningStyle" value="practical"> Hands-on practical work</label>
+                            <label><input type="checkbox" name="learningStyle" value="theoretical"> Reading and theoretical study</label>
+                            <label><input type="checkbox" name="learningStyle" value="visual"> Visual aids and diagrams</label>
+                            <label><input type="checkbox" name="learningStyle" value="collaborative"> Group discussions and collaboration</label>
+                            <label><input type="checkbox" name="learningStyle" value="independent"> Independent research</label>
+                        </div>
+                    </div>
+
+                    <!-- Career Goals -->
+                    <div class="question-card" data-question="6">
+                        <h3>What are your career aspirations?</h3>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="careerGoal" value="stem"> STEM Field (Science, Tech, Engineering, Math)</label>
+                            <label><input type="checkbox" name="careerGoal" value="business"> Business & Finance</label>
+                            <label><input type="checkbox" name="careerGoal" value="creative"> Creative Industries</label>
+                            <label><input type="checkbox" name="careerGoal" value="healthcare"> Healthcare & Medicine</label>
+                            <label><input type="checkbox" name="careerGoal" value="education"> Education & Teaching</label>
+                            <label><input type="checkbox" name="careerGoal" value="law"> Law & Politics</label>
+                            <label><input type="checkbox" name="careerGoal" value="social"> Social Work & Counseling</label>
+                            <label><input type="checkbox" name="careerGoal" value="unsure"> Not sure yet</label>
+                        </div>
+                    </div>
+
+                    <!-- Work Environment -->
+                    <div class="question-card" data-question="7">
+                        <h3>What work environment appeals to you?</h3>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="workEnvironment" value="office"> Office/Corporate setting</label>
+                            <label><input type="checkbox" name="workEnvironment" value="lab"> Laboratory or research facility</label>
+                            <label><input type="checkbox" name="workEnvironment" value="outdoor"> Outdoor or fieldwork</label>
+                            <label><input type="checkbox" name="workEnvironment" value="creative"> Creative studio or workshop</label>
+                            <label><input type="checkbox" name="workEnvironment" value="remote"> Remote work from home</label>
+                            <label><input type="checkbox" name="workEnvironment" value="varied"> Variety of locations</label>
+                        </div>
+                    </div>
+
+                    <!-- Study Intensity -->
+                    <div class="question-card" data-question="8">
+                        <h3>How do you feel about study intensity?</h3>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="studyIntensity" value="high"> I thrive under pressure and enjoy challenging coursework</label>
+                            <label><input type="checkbox" name="studyIntensity" value="moderate"> I prefer a balanced workload</label>
+                            <label><input type="checkbox" name="studyIntensity" value="light"> I prefer a lighter, more flexible approach</label>
+                        </div>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="question-card" data-question="9">
+                        <h3>What's most important to you in a career?</h3>
+                        <p class="question-subtitle">Select up to 3</p>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="values" value="helping"> Helping others</label>
+                            <label><input type="checkbox" name="values" value="innovation"> Innovation and creativity</label>
+                            <label><input type="checkbox" name="values" value="stability"> Job stability</label>
+                            <label><input type="checkbox" name="values" value="salary"> High earning potential</label>
+                            <label><input type="checkbox" name="values" value="impact"> Making a difference in society</label>
+                            <label><input type="checkbox" name="values" value="flexibility"> Work-life balance</label>
+                            <label><input type="checkbox" name="values" value="challenge"> Intellectual challenge</label>
+                            <label><input type="checkbox" name="values" value="recognition"> Recognition and status</label>
+                        </div>
+                    </div>
+
+                    <!-- Additional Comments -->
+                    <div class="question-card" data-question="10">
+                        <h3>Any additional information you'd like to share?</h3>
+                        <p class="question-subtitle">Optional - Tell us about specific interests or concerns</p>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="5" placeholder="E.g., I'm interested in combining technology with environmental science..."></textarea>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button type="button" id="prevBtn" onclick="prevQuestion()">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextQuestion()">Next</button>
+                        <button type="button" id="submitBtn" onclick="submitQuestionnaire()" style="display: none;">Get My Recommendations</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer id="footer">
+<p>&copy; 2024 UniPath – Course Guidance System</p>
+</footer>
+
+    <script src="questionnaire.js"></script>
+</body>
+</html>
